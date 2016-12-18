@@ -60,3 +60,6 @@ html {
   height: 10px;
   right: 50%;
 }
+.notransition {
+  transition: none !important;
+}
