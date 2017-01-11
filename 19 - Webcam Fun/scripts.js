@@ -29,8 +29,8 @@ function paintToCanvas() {
 
     // mess with them
     // pixels = redEffect(pixels);
-    pixels = rgbSplit(pixels);
-    ctx.globalAlpha = 0.5;
+    // pixels = rgbSplit(pixels);
+    // ctx.globalAlpha = 0.5;
 
     // pixels = greenScreen(pixels);
     // put them back
@@ -64,8 +64,8 @@ function redEffect(pixels) {
 function rgbSplit(pixels) {
   for (let i = 0; i < pixels.data.length; i += 4) {
     pixels.data[i - 150] = pixels.data[i + 0]; // RED
-    pixels.data[i + 500] = pixels.data[i + 1]; // GREEN
-    pixels.data[i - 550] = pixels.data[i + 2]; // BLUE
+    pixels.data[i + 100] = pixels.data[i + 1]; // GREEN
+    pixels.data[i - 300] = pixels.data[i + 2]; // BLUE
   }
   return pixels;
 }
